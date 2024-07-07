@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Expense - Expense Tracker</title>
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Add Expense</h1>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Expense Tracker</a>
+            </div>
+            <ul>
+                <li><a href="view_expenses.html">View Expenses</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <form action="add_expense" method="post">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            <label for="category">Category:</label>
-            <input type="text" id="category" name="category" required>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount" required>
-            <button type="submit">Add Expense</button>
-        </form>
-    </section>
+    <main>
+        <section class="form-section">
+            <h1>Add Expense</h1>
+            <form id="expense-form" class="form-container">
+                <label for="expense-name">Expense Name</label>
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <label for="expense-amount">Amount</label>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+    </main>
+    
 </body>
 </html>
